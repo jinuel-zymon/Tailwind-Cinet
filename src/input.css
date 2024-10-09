@@ -157,4 +157,47 @@
   .banner .banner__item .banner__btn a:hover i {
     @apply opacity-100 transition-all;
   }
+
+  /* MOVIES */
+  .movies{
+    @apply py-7 relative;
+  }
+  /* .movies .movies__wrapper{
+    @apply md:relative;
+  } */
+  .movies .movies__wrapper h2 {
+    @apply text-center text-primary text-[2rem] font-bold;
+  }
+  .movies .movies__wrapper p {
+    @apply text-center text-gray-500;
+  }
+  .movies .tns-nav {
+    @apply hidden;
+  }
+  .movies .tns-controls{
+    @apply absolute flex justify-between w-[98%] z-[100] translate-x-[-0.5%] translate-y-[400%];
+  }
+  .movies .tns-controls button{
+    @apply bg-light shadow-[0_10px_30px_#2b2b2b] px-5 py-3;
+  }
+  .movies .popular__item{
+    @apply flex flex-col relative;
+  }
+  .movies .popular__item img{
+    @apply mx-auto w-fit h-fit;
+  }
+  .movies .popular__text{
+    @apply text-light absolute translate-y-[-90px] translate-x-[85px] flex flex-col gap-2 font-semibold;
+  }
+  .movies .popular__text h3{
+    @apply text-[1.6rem];
+  }
+  .movies .popular__text h4{
+    @apply text-[.8rem] flex gap-3;
+  }
+  .movies .popular__text h4 span:first-child{
+    @apply text-[.9rem]
+  }
+  
+  
 }

@@ -100,6 +100,67 @@
     </div>
   </section>
 
+  <section class="movies">
+    <div class="container">
+      <div class="movies__wrapper">
+        <h2>Popular Movies</h2>
+        <p>Here are some of the most popular movies that our users & viewers enjoy.</p>
+         <div class="popular__slider">
+          <div class="popular__item">
+            <img src="/dist/img/index-img-01.jpg" alt="">
+            <div class="popular__text">
+              <h3>Euphoria</h3>
+              <h4>
+                <span><i class="fa-solid fa-calendar-day"></i></span>
+                <span>2021, DRAMA</span>
+              </h4>
+            </div>
+          </div>
+          <div class="popular__item">
+            <img src="/dist/img/index-img-02.jpg" alt="">
+            <div class="popular__text">
+              <h3>Disconnected</h3>
+              <h4>
+                <span><i class="fa-solid fa-calendar-day"></i></span>
+                <span>2021, DRAMA</span>
+              </h4>
+            </div>
+          </div>
+          <div class="popular__item">
+            <img src="/dist/img/index-img-03.jpg" alt="">
+            <div class="popular__text">
+              <h3>Paradigm Lost</h3>
+              <h4>
+                <span><i class="fa-solid fa-calendar-day"></i></span>
+                <span>2021, DOCUMENTARY, SPORT</span>
+              </h4>
+            </div>
+          </div>
+          <div class="popular__item">
+            <img src="/dist/img/index-img-04.jpg" alt="">
+            <div class="popular__text">
+              <h3>Alita: Battle Angel</h3>
+              <h4>
+                <span><i class="fa-solid fa-calendar-day"></i></span>
+                <span>2021, ACTION</span>
+              </h4>
+            </div>
+          </div>
+          <div class="popular__item">
+            <img src="/dist/img/index-img-05.jpg" alt="">
+            <div class="popular__text">
+              <h3>Black Mirror</h3>
+              <h4>
+                <span><i class="fa-solid fa-calendar-day"></i></span>
+                <span>2021, SCI-FI</span>
+              </h4>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </section>
+
   <script src="/dist/js/toggleMenu.js"></script>
   <script src="/dist/js/headerDropDown.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
@@ -119,5 +180,21 @@
       }
     });
     </script>
+  <script type="module">
+    // import {tns} from './src/tiny-slider.js';
+  
+    var slider = tns({
+      container: '.popular__slider',
+      items: 1,
+      slideBy: 1,
+      autoplay: false,
+      controlsText:['<i class="fa-solid fa-chevron-left"></i>','<i class="fa-solid fa-chevron-right"></i>'],
+      responsive:{
+        768:{
+          items:3
+        }
+      }
+    });
+    </script> 
 </body>
 </html>
