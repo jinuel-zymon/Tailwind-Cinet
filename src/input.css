@@ -6,99 +6,155 @@
   @apply mx-auto max-w-[75rem] p-2;
 }
 
-@layer components{
+@layer components {
   .header {
     @apply bg-light fixed w-full z-[999]
     md:border-b-[1px] md:border-gray-400 lg:border-b-0 lg:bg-transparent lg:translate-y-10;
   }
-  .header .header__wrapper{
+  .header .header__wrapper {
     @apply flex items-center justify-between;
   }
-  .header .branding{
+  .header .branding {
     @apply flex items-center gap-5;
   }
-  .header .branding img{
+  .header .branding img {
     @apply w-40 lg:w-28;
   }
   .header .toggle__menu {
     @apply md:hidden;
   }
-  .header .toggle__menu span:first-child{
+  .header .toggle__menu span:first-child {
     @apply w-[2.5rem] h-[2px] bg-dark block rounded-full transition ease-in duration-500;
   }
-  .header .toggle__menu span:nth-child(2){
+  .header .toggle__menu span:nth-child(2) {
     @apply w-[2rem] h-[2px] bg-dark block rounded-full my-2 transition ease-in duration-500;
   }
-  .header .toggle__menu span:last-child{
+  .header .toggle__menu span:last-child {
     @apply w-[1.5rem] h-[2px] bg-dark block rounded-full transition ease-in duration-500;
   }
-  .header .toggle__menu.open span:first-child{
+  .header .toggle__menu.open span:first-child {
     @apply w-[2.5rem] rotate-[225deg] translate-y-3 transition ease-in duration-500;
   }
-  .header .toggle__menu.open span:nth-child(2){
+  .header .toggle__menu.open span:nth-child(2) {
     @apply opacity-0;
   }
-  .header .toggle__menu.open span:last-child{
+  .header .toggle__menu.open span:last-child {
     @apply w-[2.5rem] rotate-[-225deg] -translate-y-2 transition ease-in duration-500;
   }
-  .header ul.header__nav{
+  .header ul.header__nav {
     @apply bg-light absolute left-[-100rem] top-16 h-[calc(100vh-65.45px)] w-[250px] pt-8 flex flex-col gap-1 border transition-all
     lg:bg-transparent lg:static lg:h-fit lg:w-fit lg:pt-0 lg:flex lg:flex-row lg:border-0 lg:gap-5;
   }
-  .header ul.header__nav.open{
+  .header ul.header__nav.open {
     @apply left-[0rem] transition-all;
   }
-  .header .header__actions{
+  .header .header__actions {
     @apply lg:flex lg:items-center lg:gap-[1rem];
   }
-  .header ul.header__nav li.nav{
+  .header ul.header__nav li.nav {
     @apply relative;
   }
-  .header ul.header__nav li.nav:hover ul.header__sub{
+  .header ul.header__nav li.nav:hover ul.header__sub {
     @apply lg:translate-y-5 lg:opacity-100;
   }
-  .header ul.header__nav li.nav a.navA{
+  .header ul.header__nav li.nav a.navA {
     @apply flex items-center justify-between px-4 py-3 hover:bg-accent hover:text-light font-semibold text-lg
     lg:text-sm lg:justify-normal lg:gap-2 lg:hover:bg-transparent lg:hover:text-dark
     lg:after:content-[''] lg:after:w-[70%] lg:after:h-1 lg:hover:after:bg-accent lg:after:block
     lg:after:absolute lg:after:bottom-0;
   }
-  .header ul.header__nav li.nav a.navA.open{
+  .header ul.header__nav li.nav a.navA.open {
     @apply bg-accent text-light 
     lg:bg-transparent lg:text-dark;
   }
-  .header ul.header__nav li.nav a i{
+  .header ul.header__nav li.nav a i {
     @apply transition-all text-[.5rem];
   }
-  .header ul.header__nav li.nav a i.open{
+  .header ul.header__nav li.nav a i.open {
     @apply rotate-180 transition-all 
     lg:rotate-0;
   }
   .header ul.header__nav li.nav:hover a span,
-  .header ul.header__nav li.nav:hover a i{
+  .header ul.header__nav li.nav:hover a i {
     @apply text-light
     lg:bg-transparent lg:text-dark;
   }
-  .header ul.header__sub{
+  .header ul.header__sub {
     @apply max-h-[0rem] overflow-hidden transition-all
     lg:max-h-[50rem] lg:bg-light lg:absolute lg:translate-y-[5rem] lg:opacity-0 lg:shadow-2xl
     lg:w-[15rem] lg:px-3;
   }
-  .header ul.header__sub.open{
+  .header ul.header__sub.open {
     @apply max-h-[50rem] transition-all;
   }
-  .header ul.header__sub li a{
+  .header ul.header__sub li a {
     @apply flex items-center justify-between px-4 py-3 !text-[.9rem] !font-extralight
     lg:hover:text-accent;
   }
-  .header ul.header__sub li{
+  .header ul.header__sub li {
     @apply mt-1 hover:bg-accent hover:text-light pl-5
     lg:border-b-[1px] lg:hover:bg-transparent lg:hover:after:hidden;
   }
 
   /* BANNNER */
-  .banner{
-    @apply h-[85vh] bg-primary 
-    md:bg-light md:bg-banner-desk md:bg-cover md:bg-no-repeat md:bg-center;
+  .banner {
+    @apply h-[100vh] bg-primary relative
+    md:h-[80vh] lg:h-[90vh] md:bg-light md:bg-banner-desk md:bg-cover md:bg-no-repeat md:bg-center;
+  }
+  .banner .tns-nav {
+    @apply translate-y-[4800%] flex justify-center gap-10
+    md:translate-y-[3000%] lg:translate-y-[3800%];
+  }
+  .banner .tns-nav button {
+    @apply bg-gray-600 p-2 rounded-full hover:bg-accent;
+  }
+  .banner .tns-nav button.tns-nav-active {
+    @apply bg-accent;
+  }
+  .banner .tns-controls {
+    @apply lg:translate-y-[500%] lg:flex lg:justify-between lg:absolute lg:left-0 lg:w-[90%] lg:translate-x-[5%] lg:z-[100];
+  }
+  .banner .tns-controls button {
+    @apply 2xl:bg-light 2xl:shadow-[0_10px_30px_#2b2b2b] 2xl:px-5 2xl:py-3 2xl:rounded-full;
+  }
+  .banner .banner__item {
+    @apply px-16 md:px-4 md:!inline-grid md:!grid-cols-2 md:gap-[10rem] md:items-center;
+  }
+  .banner .banner__item img {
+    @apply w-[20rem] mx-auto mb-10 md:order-2
+    lg:w-[25rem];
+  }
+  .banner .banner__item h4 {
+    @apply text-center;
+  }
+  .banner .banner__item h4 span {
+    @apply text-light text-xs font-semibold px-2;
+  }
+  .banner .banner__item h4 span:nth-child(2) {
+    @apply border-r-2 border-l-2;
+  }
+  .banner .banner__item h1 {
+    @apply text-[2.3rem] text-light font-bold text-center my-4
+    lg:text-7xl;
+  }
+  .banner .banner__item p {
+    @apply text-light text-center mb-4;
+  }
+  .banner .banner__item .banner__btn {
+    @apply py-5;
+  }
+  .banner .banner__item .banner__btn a {
+    @apply flex items-center gap-2 relative w-fit mx-auto px-5
+    before:content-[''] before:w-14 before:h-14 before:bg-accent before:block before:rounded-full
+    before:absolute before:-left-1 before:transition-all hover:before:w-full hover:before:transition-all;
+  }
+  .banner .banner__item .banner__btn a span {
+    @apply text-light font-semibold relative;
+  }
+  .banner .banner__item .banner__btn a i {
+    @apply text-light text-[.5rem] opacity-0 relative transition-all;
+  }
+  .banner .banner__item .banner__btn a:hover i {
+    @apply opacity-100 transition-all;
   }
 }
