@@ -103,8 +103,10 @@
   <section class="movies">
     <div class="container">
       <div class="movies__wrapper">
-        <h2>Popular Movies</h2>
-        <p>Here are some of the most popular movies that our users & viewers enjoy.</p>
+        <div class="movies__title">
+          <h2>Popular Movies</h2>
+          <p>Here are some of the most popular movies that our users & viewers enjoy.</p>
+        </div>
          <div class="popular__slider">
           <div class="popular__item">
             <img src="/dist/img/index-img-01.jpg" alt="">
@@ -156,7 +158,101 @@
               </h4>
             </div>
           </div>
-        </div> 
+        </div>
+        <div class="movies__title">
+          <h2>New Releases</h2>
+          <p>Check out the highly rated TV shows, available at Cinet.</p> 
+        </div>
+         <div class="new__slider">
+          <div class="popular__item">
+            <img src="/dist/img/index-img-07.jpg" alt="">
+            <div class="popular__text">
+              <h3>Wild</h3>
+              <h4>
+                <span><i class="fa-solid fa-calendar-day"></i></span>
+                <span>2021, DRAMA</span>
+              </h4>
+            </div>
+          </div>
+          <div class="popular__item">
+            <img src="/dist/img/index-img-08.jpg" alt="">
+            <div class="popular__text">
+              <h3>Stranger Things</h3>
+              <h4>
+                <span><i class="fa-solid fa-calendar-day"></i></span>
+                <span>2021, DRAMA</span>
+              </h4>
+            </div>
+          </div>
+          <div class="popular__item">
+            <img src="/dist/img/index-img-09.jpg" alt="">
+            <div class="popular__text">
+              <h3>Extraction</h3>
+              <h4>
+                <span><i class="fa-solid fa-calendar-day"></i></span>
+                <span>2021, ACTION</span>
+              </h4>
+            </div>
+          </div>
+          <div class="popular__item">
+            <img src="/dist/img/index-img-10.jpg" alt="">
+            <div class="popular__text">
+              <h3>Triple Frontier</h3>
+              <h4>
+                <span><i class="fa-solid fa-calendar-day"></i></span>
+                <span>2021, ADVENTURES</span>
+              </h4>
+            </div>
+          </div>
+          <div class="popular__item">
+            <img src="/dist/img/index-img-11.jpg" alt="">
+            <div class="popular__text">
+              <h3>A Million Ways</h3>
+              <h4>
+                <span><i class="fa-solid fa-calendar-day"></i></span>
+                <span>2021, COMEDY</span>
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="news">
+    <div class="container">
+      <div class="news__wrapper">
+        <h1>News</h1>
+        <div class="news__list">
+          <div class="news__item">
+            <img src="/dist/img/home-2-8.jpg" alt="">
+            <div class="news__text">
+              <a href="">Top 10 Movies to Watch This Summer</a>
+              <h4>September 12, 2021</h4>
+            </div>
+          </div>
+          <div class="news__item">
+            <img src="/dist/img/home-2-9.jpg" alt="">
+            <div class="news__text">
+              <a href="">TV Shows & Movies About Superheroes</a>
+              <h4>September 13, 2021</h4>
+            </div>
+          </div>
+          <div class="news__item">
+            <img src="/dist/img/home-2-10.jpg" alt="">
+            <div class="news__text">
+              <a href="">Unknown Locations from Popular Movies</a>
+              <h4>September 14, 2021</h4>
+            </div>
+          </div>
+          <div class="news__item">
+            <img src="/dist/img/home-2-11.jpg" alt="">
+            <div class="news__text">
+              <a href="">Top 5 Popular Movie Stars to Watch for in 2021</a>
+              <h4>September 15, 2021</h4>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -192,6 +288,28 @@
       responsive:{
         768:{
           items:3
+        },
+        650:{
+          items:2
+        }
+      }
+    });
+    </script> 
+  <script type="module">
+    // import {tns} from './src/tiny-slider.js';
+  
+    var slider = tns({
+      container: '.new__slider',
+      items: 1,
+      slideBy: 1,
+      autoplay: false,
+      controlsText:['<i class="fa-solid fa-chevron-left"></i>','<i class="fa-solid fa-chevron-right"></i>'],
+      responsive:{
+        768:{
+          items:3
+        },
+        650:{
+          items:2
         }
       }
     });

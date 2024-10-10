@@ -12,6 +12,9 @@ module.exports = {
       backgroundImage:{
         "banner-desk":"url('/dist/img/cinet-banner-desktop.svg')",
       },
+      screens:{
+        "sm-wide":"650px",
+      },
     },
   },
   plugins: [],
